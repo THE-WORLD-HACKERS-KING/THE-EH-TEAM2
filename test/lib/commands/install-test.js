@@ -25,6 +25,11 @@ const installTest = new InstallTest({
   },
   config: {
     validate: () => {},
+    get: (key) => {
+      if (key === 'location') {
+        return 'project'
+      }
+    },
   },
 })
 
